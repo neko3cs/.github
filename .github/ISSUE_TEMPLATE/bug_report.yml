@@ -63,7 +63,7 @@ body:
     id: related_files
     attributes:
       label: 関連ファイル / 対象箇所
-      description: このバグに関連するファイルやモジュールを記載してください。AIエージェントの調査範囲を絞るために役立ちます。
+      description: このバグに関連するファイルやモジュールを記載してください。調査範囲を絞るために役立ちます。
       placeholder: |
         - src/foo/bar.ts
         - lib/utils/
