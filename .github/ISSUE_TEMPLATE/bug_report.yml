@@ -1,0 +1,96 @@
+name: バグ報告
+description: バグや予期しない動作を報告する
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: 説明
+      description: バグの内容を明確かつ簡潔に説明してください。
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: 再現手順
+      description: 問題を再現するための手順を番号付きで記載してください。
+      placeholder: |
+        1.
+        2.
+        3.
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: 期待する動作
+      description: 本来どのような動作になるべきか記載してください。
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: 実際の動作
+      description: 実際に起きていることを記載してください。エラーメッセージやスタックトレース、スクリーンショットがあれば添付してください。
+    validations:
+      required: true
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: 環境情報
+      description: 問題が発生している環境の詳細を記載してください。
+      placeholder: |
+        - OS:
+        - ランタイム / 言語バージョン:
+        - パッケージバージョン:
+        - その他関連ツール:
+
+  - type: input
+    id: version
+    attributes:
+      label: バージョン
+      description: バグが確認されたバージョンを記載してください。
+      placeholder: "例: v1.2.3"
+    validations:
+      required: true
+
+  - type: textarea
+    id: related_files
+    attributes:
+      label: 関連ファイル / 対象箇所
+      description: このバグに関連するファイルやモジュールを記載してください。AIエージェントの調査範囲を絞るために役立ちます。
+      placeholder: |
+        - src/foo/bar.ts
+        - lib/utils/
+
+  - type: textarea
+    id: acceptance_criteria
+    attributes:
+      label: 受け入れ条件
+      description: このバグが修正されたと判断するための具体的かつテスト可能な条件を記載してください。
+      placeholder: |
+        - [ ]
+        - [ ]
+        - [ ]
+    validations:
+      required: true
+
+  - type: textarea
+    id: out_of_scope
+    attributes:
+      label: 対応スコープ外
+      description: このIssue対応時に変更してはいけないこと・含めないことを明示してください。
+      placeholder: |
+        - X の既存の動作を変更しない
+        - Y の依存関係をアップグレードしない
+
+  - type: textarea
+    id: additional_context
+    attributes:
+      label: 補足情報
+      description: バグの理解や修正に役立つその他の情報・ログ・参考リンクを記載してください。
