@@ -1,0 +1,64 @@
+name: 機能要望
+description: 新機能や改善を提案する
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: 説明
+      description: 提案する機能や改善内容を明確かつ簡潔に説明してください。
+    validations:
+      required: true
+
+  - type: textarea
+    id: motivation
+    attributes:
+      label: 動機 / ユースケース
+      description: なぜこの機能が必要ですか？どのような問題を解決しますか？
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposed_solution
+    attributes:
+      label: 提案する解決策
+      description: 期待する動作や実装方針を具体的に記載してください。AIエージェントが意図を正確に理解できるよう、できるだけ詳細に書いてください。
+    validations:
+      required: true
+
+  - type: textarea
+    id: related_files
+    attributes:
+      label: 関連ファイル / 対象箇所
+      description: この変更に関連するファイルやモジュールを記載してください。AIエージェントの作業開始箇所の特定に役立ちます。
+      placeholder: |
+        - src/foo/bar.ts
+        - lib/utils/
+
+  - type: textarea
+    id: acceptance_criteria
+    attributes:
+      label: 受け入れ条件
+      description: この機能が完成したと判断するための具体的かつテスト可能な条件を記載してください。
+      placeholder: |
+        - [ ]
+        - [ ]
+        - [ ]
+    validations:
+      required: true
+
+  - type: textarea
+    id: out_of_scope
+    attributes:
+      label: 対応スコープ外
+      description: このIssue対応時に変更してはいけないこと・含めないことを明示してください。
+      placeholder: |
+        - X の公開APIを変更しない
+        - Y の既存の動作を変えない
+
+  - type: textarea
+    id: additional_context
+    attributes:
+      label: 補足情報
+      description: その他のコンテキスト・参考リンク・設計上の考慮事項を記載してください。
