@@ -3,6 +3,11 @@ description: 新機能や改善を提案する
 title: "[Feature]: "
 labels: ["enhancement"]
 body:
+  - type: markdown
+    attributes:
+      value: |
+        ご提案ありがとうございます。「何を作るか」よりも先に「なぜ必要か（どんな課題があるか）」を記入いただけると検討がスムーズです。
+
   - type: textarea
     id: description
     attributes:
@@ -26,6 +31,14 @@ body:
       description: 期待する動作や実装方針を具体的に記載してください。意図が正確に伝わるよう、できるだけ詳細に書いてください。
     validations:
       required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: 代替案・検討したこと
+      description: 他に検討した方法があれば、それを採用しなかった理由とともに記載してください。
+      placeholder: |
+        例）既存の X 機能で代用を試みたが、Y という制約により目的を達成できなかった
 
   - type: textarea
     id: related_files
@@ -62,3 +75,11 @@ body:
     attributes:
       label: 補足情報
       description: その他のコンテキスト・参考リンク・設計上の考慮事項を記載してください。
+
+  - type: checkboxes
+    id: confirmation
+    attributes:
+      label: 確認事項
+      options:
+        - label: 機密情報（接続文字列・パスワード・シークレット等）を本文に含めていません
+          required: true
