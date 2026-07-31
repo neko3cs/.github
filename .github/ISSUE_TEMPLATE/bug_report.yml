@@ -3,6 +3,11 @@ description: バグや予期しない動作を報告する
 title: "[Bug]: "
 labels: ["bug"]
 body:
+  - type: markdown
+    attributes:
+      value: |
+        バグ報告ありがとうございます。再現と原因調査のため、わかる範囲で記入してください（不明な項目は「不明」で構いません）。
+
   - type: textarea
     id: description
     attributes:
@@ -89,8 +94,28 @@ body:
         - X の既存の動作を変更しない
         - Y の依存関係をアップグレードしない
 
+  - type: dropdown
+    id: severity
+    attributes:
+      label: 影響度
+      description: このバグが業務・利用者に与える影響の大きさを選択してください。
+      options:
+        - 高（利用不能・データ破損など重大な影響がある）
+        - 中（回避策はあるが支障がある）
+        - 低（軽微・表示崩れ・誤字など）
+    validations:
+      required: true
+
   - type: textarea
     id: additional_context
     attributes:
       label: 補足情報
       description: バグの理解や修正に役立つその他の情報・ログ・参考リンクを記載してください。
+
+  - type: checkboxes
+    id: confirmation
+    attributes:
+      label: 確認事項
+      options:
+        - label: 機密情報（接続文字列・パスワード・シークレット等）を本文に含めていません
+          required: true
