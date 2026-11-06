@@ -77,7 +77,7 @@ body:
     id: acceptance_criteria
     attributes:
       label: 受け入れ条件
-      description: このバグが修正されたと判断するための具体的かつテスト可能な条件を記載してください。
+      description: このバグが修正されたと判断するための具体的かつテスト可能な条件を記載してください。計算や変換など入力から結果が決まるものは、入力と期待結果の表で書くと確認しやすくなります。
       placeholder: |
         - [ ]
         - [ ]
